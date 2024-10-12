@@ -1,0 +1,120 @@
+<!-- Conteneur principal -->
+    
+        <!-- Accueil : Choix -->
+        <div id="game-home">
+            <h1>Morpion en ligne</h1>
+            <div class="flex gap20">
+                <div class="w25">
+                    <img class="full" src="image/morpion.png" alt="" srcset="">
+                </div>
+                <div  class="w75">
+                    <button id="open-game-settings" class="btn full">
+                        <i class="fa-solid fa-robot"></i> Jouer contre l'Ordi
+                    </button>
+                    <button id="open-game-rules" class="btn full">
+                        <i class="fa-solid fa-book"></i>
+                        Guide de jeu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Accueil : Option de jeu -->
+        <div id="game-settings">
+            <div class="popup">
+                <button id="close-game-settings" class="btn">X</button>
+                <header class="header-popup">
+                    <h2>Jouer contre l'ordi</h2>
+                </header>
+                <div class="body-popup"> <!-- Conteneur principal pour le popup -->
+                    <div>
+                        <label>Pseudo</label> <!-- Label pour le champ de saisie du pseudo -->
+                        <input type="text" id="pseudo"> <!-- Champ de saisie pour le pseudo -->
+                    </div>
+                    <div>
+                        <label>Temps par tour</label> <!-- Label pour le menu déroulant du temps par tour -->
+                        <select id="temps"> <!-- Menu déroulant pour choisir le temps par tour -->
+                            <option value="15">15 sec</option> <!-- Option pour 15 secondes -->
+                            <option value="30">30 sec</option> <!-- Option pour 30 secondes -->
+                        </select>
+                    </div>
+                    <div>
+                        <label>Qui joue en premier</label> <!-- Label pour le menu déroulant du joueur qui commence -->
+                        <select id="first"> <!-- Menu déroulant pour choisir qui joue en premier -->
+                            <option value="ordi">Ordi</option> <!-- Option pour l'ordinateur -->
+                            <option value="joueur">Joueur</option> <!-- Option pour le joueur -->
+                        </select>
+                    </div>
+                    <div>
+                        <button class="btn full" id="ok">Valider</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Jeu -->
+        <div id="game">
+            <header>
+                <div id="game-opponent">
+                    <div class="flex justify-center gap20">
+                        <!-- Opposant 1 -->
+                        <div class="flex gap20">
+                            <div>
+                                <div class="pseudo" id="player-1-pseudo">Guillaume</div>
+                                <div class="time" id="player-1-time">00:30</div>
+                            </div>
+                            <div class="avatar">
+                                <img src="image/user.png" alt="">
+                            </div>
+                        </div>
+                        <!-- Opposant 2 -->
+                        <div class="flex gap20">
+                            <div>
+                                <div class="pseudo">Ordi</div>
+                                <div class="time" id="player-2-time">00:30</div>
+                            </div>
+                            <div class="avatar">
+                                <img src="image/robot.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div id="plateau">
+            </div>
+        </div>
+        <!-- Guide de jeu -->
+        <div id="game-rules">
+            <button id="open-game-home" class="btn"><i class="fa-solid fa-arrow-left"></i> Retour à l'accueil</button>
+            <h1>Règles du Morpion</h1>
+            <h2>Objectif du jeu</h2>
+            <p>Le but du jeu est d'aligner trois de ses symboles (X ou O) sur une ligne, une colonne ou en diagonale avant l'adversaire.</p>
+
+            <h2>Matériel nécessaire</h2>
+            <ul>
+                <li>Un plateau de jeu de 3x3 cases.</li>
+                <li>Deux joueurs (un joue avec les X, l'autre avec les O).</li>
+            </ul>
+
+            <h2>Déroulement du jeu</h2>
+            <ul>
+                <li>Les joueurs décident qui commence en premier.</li>
+                <li>Les joueurs jouent à tour de rôle pour placer leur symbole dans une case vide.</li>
+                <li>Le premier joueur à aligner trois de ses symboles remporte la partie.</li>
+                <li>Si toutes les cases sont remplies sans qu'un joueur ait gagné, la partie se termine par un match nul.</li>
+            </ul>
+
+            <h2>Conditions de victoire</h2>
+            <p>Un joueur gagne s'il réussit à aligner trois de ses symboles :</p>
+            <ul>
+                <li>Horizontalement (sur une ligne).</li>
+                <li>Verticalement (dans une colonne).</li>
+                <li>Diagonale (de l'un des coins à l'autre).</li>
+            </ul>
+
+            <h2>Fin de la partie</h2>
+            <p>La partie peut se terminer de trois manières :</p>
+            <ul>
+                <li>Un joueur gagne en alignant trois de ses symboles.</li>
+                <li>La partie se termine par un match nul si toutes les cases sont remplies sans gagnant.</li>
+                <li>Les joueurs peuvent choisir de recommencer une nouvelle partie.</li>
+            </ul>
+        </div>
