@@ -281,7 +281,6 @@ export default class GameBoard extends HTMLElement {
         });
     }
 
-
     render() {
         this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="css/style.css">
